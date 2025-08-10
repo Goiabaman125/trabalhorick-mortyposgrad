@@ -1,0 +1,114 @@
+/* ====== Página de Lista de Personagens ====== */
+.page-container {
+  min-height: 100vh;
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Logo no topo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.logo-container img {
+  width: 250px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* ====== Estilo dos Cards ====== */
+.character-card {
+  background-color: #1e1e2f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.character-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+.character-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 3px solid #00ff9d;
+}
+
+.character-info {
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.character-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #00ff9d;
+}
+
+.character-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-alive {
+  background-color: #00ff9d;
+}
+
+.status-dead {
+  background-color: #ff4d4d;
+}
+
+.status-unknown {
+  background-color: #9e9e9e;
+}
+
+/* ====== Paginação ====== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 8px;
+}
+
+.pagination button {
+  background-color: #1e293b;
+  color: #00ff9d;
+  border: 2px solid #00ff9d;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #00ff9d;
+  color: #0f172a;
+}
+
+.pagination button:disabled {
+  background-color: #334155;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
